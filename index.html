@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的美食活力主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Comic Sans MS", "幼圆", sans-serif;
+        }
+        body {
+            background-color: #fff9e6;
+            color: #333;
+            padding: 20px;
+        }
+        /* 卡通标题栏 */
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(135deg, #ffd166, #ff8e91);
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(255,142,145,0.3);
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin-bottom: 10px;
+        }
+        .header p {
+            font-size: 1.2rem;
+            color: #fff3cd;
+        }
+        /* 卡通头像 */
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-image: url("https://img.icons8.com/fluency/96/000000/burger.png");
+            background-size: 80px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(255,209,102,0.5);
+        }
+        /* 内容模块 */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            gap: 25px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+            border: 2px solid #ffd166;
+        }
+        .card h2 {
+            color: #ff8e91;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .card h2::before {
+            content: "";
+            width: 30px;
+            height: 30px;
+            background-image: url("https://img.icons8.com/fluency/96/000000/cake.png");
+            background-size: cover;
+        }
+        .intro-text {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        /* 美食清单 */
+        .food-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .food-item {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: #d97706;
+            box-shadow: 0 3px 5px rgba(217,119,6,0.1);
+            transition: transform 0.3s ease;
+        }
+        .food-item:hover {
+            transform: scale(1.05);
+        }
+        .food-item::before {
+            content: "🍔";
+            margin-right: 5px;
+        }
+        /* 联系方式 */
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .contact a {
+            color: #ff8e91;
+            text-decoration: none;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact a::before {
+            content: "📱";
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        /* 底部版权 */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #999;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部区域 -->
+    <div class="header">
+        <div class="avatar"></div>
+        <h1>美食爱好者的活力空间</h1>
+        <p>用美食治愈生活，用活力拥抱每一天 ✨</p>
+    </div>
+
+    <!-- 内容容器 -->
+    <div class="container">
+        <!-- 个人简介 -->
+        <div class="card">
+            <h2>关于我</h2>
+            <p class="intro-text">
+                大家好！我是一名热爱美食的快乐干饭人～ 喜欢探索各种让人充满幸福感的美食，无论是街头小吃还是精致料理，只要能带来满足感和活力，都是我的心头好！平时喜欢分享美食体验，记录每一次味蕾的惊喜，希望能和同样热爱生活的你一起交流呀！
+            </p>
+        </div>
+
+        <!-- 活力美食清单 -->
+        <div class="card">
+            <h2>我的治愈系美食</h2>
+            <ul class="food-list">
+                <li class="food-item">芝士汉堡</li>
+                <li class="food-item">珍珠奶茶</li>
+                <li class="food-item">草莓蛋糕</li>
+                <li class="food-item">烤肉拼盘</li>
+                <li class="food-item">番茄意面</li>
+                <li class="food-item">芒果糯米饭</li>
+                <li class="food-item">麻辣火锅</li>
+                <li class="food-item">提拉米苏</li>
+            </ul>
+        </div>
+
+        <!-- 联系方式 -->
+        <div class="card">
+            <h2>联系我</h2>
+            <div class="contact">
+                <a href="mailto:foodlover@example.com">邮箱：foodlover@example.com</a>
+                <a href="https://weixin.example.com" target="_blank">微信：FoodVibes2024</a>
+                <a href="https://instagram.com/food_lover" target="_blank">INS：food_lover</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部 -->
+    <div class="footer">
+        <p>© 2024 美食活力主页 | 卡通治愈风 · 美食爱好者专属</p>
+    </div>
+</body>
+</html>
